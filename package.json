@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --env=jsdom"
   },
   "repository": {
     "type": "git",
@@ -13,6 +13,20 @@
   "author": "Mayahi Adel",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "jest": "^27.4.7"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/server/"
+    ]
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
